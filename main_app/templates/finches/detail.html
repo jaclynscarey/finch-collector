@@ -12,6 +12,10 @@
               <p>Beak Size: {{ finch.beak_size }}</p>
               <p>Location: {{ finch.location }}</p>        
             </div>
+            <div class="card-action">
+                <a href="{% url 'finches_update' finch.id %}" class="green-text">Edit</a>
+                <a href="{% url 'finches_delete' finch.id %}" class="red-text">Delete</a>
+            </div>
         </div>
     </div>
 </div>

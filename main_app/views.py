@@ -1,4 +1,4 @@
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.shortcuts import render
 from .models import Finch
 
@@ -25,3 +25,12 @@ def finches_detail(request, finch_id):
 class FinchCreate(CreateView):
     model = Finch
     fields = '__all__'
+
+class FinchUpdate(UpdateView):
+    model = Finch
+    fields = '__all__'
+
+class FinchDelete(DeleteView):
+    model = Finch
+    success_url = '/finches'
+

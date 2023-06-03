@@ -2,14 +2,18 @@
 
 {% block content %}
 
-    <h1>Add Finch</h1>
+    {% if object %}
+        <h1>Edit <span class="indigo-text">{{ object.species }}</span></h1>
+    {% else %}
+        <h1>Add Finch</h1>
+    {% endif %}
 
     <form action="" method="post">
         {% csrf_token %}
         <table>
             {{ form.as_table }}
         </table>
-        <input type="submit" value="Add Finch" class="btn green">
+        <input type="submit" value="{% if object %}Save Changes{% else %}Add Finch{% endif %}" class="btn green">
     </form>
 
 {% endblock %}
