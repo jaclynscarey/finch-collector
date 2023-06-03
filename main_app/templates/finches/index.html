@@ -4,7 +4,7 @@
 <h1>Finch List</h1>
 
 {% for finch in finches %}
-<a href="">
+<a href="{% url 'detail' finch.id %}">
     <div class="card">
       <div class="card-content">
         <span class="cart-title">{{ finch.species }}</span>
