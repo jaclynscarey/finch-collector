@@ -10,23 +10,25 @@
     <title>Finch Collector</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <div>
+    <header class="navbar-fixed">
+        <nav class="indigo">
+            <div class="nav-wrapper">
                 <ul>
-                    <li><a href="{% url 'home' %}">Finch Collector</a></li>
+                    <li><a href="{% url 'home' %}" class="left brand-logo">Finch Collector</a></li>
+                </ul>
+                <ul class="right">
                     <li><a href="{% url 'about' %}">About</a></li>
                     <li><a href="{% url 'index' %}">View All Finches</a></li>
                 </ul>
             </div>
         </nav>
     </header>
-    <main>
+    <main class="container">
         {% block content %}
         {% endblock %}         
     </main>
-    <footer>
-        <div>All Rights Reserved. &copy; 2023 Finch Collector</div>
+    <footer class="page-footer indigo">
+        <div class="right-align">All Rights Reserved. &copy; 2023 Cat Collector &nbsp;</div>
     </footer>
 </body>
 </html>
