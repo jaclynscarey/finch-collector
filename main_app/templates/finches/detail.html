@@ -7,7 +7,8 @@
     <div class="col s6">
         <div class="card">
             <div class="card-content">
-              <span class="cart-title">{{ finch.species }}</span>
+              <span class="cart-title">{{ finch.name }}</span>
+              <p>Species: {{ finch.species }}</p>
               <p>Color: {{ finch.color }}</p>
               <p>Beak Size: {{ finch.beak_size }}</p>
               <p>Location: {{ finch.location }}</p>        
@@ -24,6 +25,12 @@
             {{ feeding_form.as_p }}
             <input type="submit" value="Add Feeding" class="btn">
         </form>
+        <br>
+        {% if finch.fed_for_today %}
+            <div class="card-panel teal-text center-align">{{ finch.name }} has been fed all meals for today.</div>
+        {% else %}
+            <div class="card-panel red-text center-align">{{ finch.name }} might be hungry.</div>
+        {% endif %}
         <table class="striped">
             <thead>
                 <tr><th>Date</th><th>Meal</th></tr>

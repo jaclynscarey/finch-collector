@@ -12,7 +12,7 @@ def about(request):
     return render(request, 'about.html')
 
 def finches_index(request):
-    finches = Finch.objects.order_by('species').all()
+    finches = Finch.objects.order_by('name').all()
     return render(request, 'finches/index.html', {
         'finches': finches
     })

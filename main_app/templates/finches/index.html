@@ -7,7 +7,8 @@
 <a href="{% url 'detail' finch.id %}">
     <div class="card">
       <div class="card-content">
-        <span class="cart-title">{{ finch.species }}</span>
+        <span class="cart-title">{{ finch.name }}</span>
+        <p>Species: {{ finch.species }}</p>
         <p>Color: {{ finch.color }}</p>
         <p>Beak Size: {{ finch.beak_size }}</p>
         <p>Location: {{ finch.location }}</p>        
